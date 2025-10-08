@@ -13,7 +13,9 @@ body {
 
 .hero {
   text-align: center;
-  padding: 60px 0 40px;
+  padding: 80px 0 60px;
+  background: linear-gradient(to right, #EEF2FF, #E0E7FF);
+  border-radius: 0 0 24px 24px;
 }
 
 .hero h1 {
@@ -23,7 +25,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 24px;
 }
 
@@ -35,11 +37,13 @@ body {
   border-radius: 12px;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
 .btn:hover {
   background: #3730A3;
+  transform: translateY(-2px);
 }
 
 .section {
@@ -58,8 +62,14 @@ body {
 }
 
 .section ul {
-  list-style: disc;
-  margin-left: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li::before {
+  content: "✓ ";
+  color: #4F46E5;
+  font-weight: bold;
 }
 
 .grid2 {
@@ -68,9 +78,16 @@ body {
   gap: 16px;
 }
 
+.testimonial-section {
+  background: #EEF2FF;
+  border-radius: 16px;
+  padding: 32px;
+}
+
 .testimonial {
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  color: #1E1B4B;
 }
 
 .footer {
@@ -83,14 +100,16 @@ body {
 .author-block {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .author-img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #4F46E5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 @keyframes fadeIn {
@@ -112,3 +131,7 @@ body {
     text-align: center;
   }
 }
+    text-align: center;
+  }
+}
+
