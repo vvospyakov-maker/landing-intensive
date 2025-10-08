@@ -1,0 +1,9 @@
+landing_intensive/
+│
+├── index.html
+├── styles.css
+├── images/
+│   ├── hero.jpg
+│   ├── author.jpg
+│   └── (другие изображения)
+├── README.txt
