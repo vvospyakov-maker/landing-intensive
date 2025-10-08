@@ -88,18 +88,16 @@
     </details>
   </section>
 
-  <section class="fade-in" id="form">
+  <section id="form" class="fade-in">
     <h2>Запишись сейчас</h2>
     <p><strong>Стоимость участия: 3 900 ₽</strong></p>
-    <iframe data-tally-src="https://tally.so/r/mOp9pQ" loading="lazy" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" title="Форма записи"></iframe>
-    <script>
-      let d = document, w = "https://tally.so/widgets/embed.js";
-      if (!d.querySelector(`script[src="${w}"]`)) {
-        let s = d.createElement("script");
-        s.src = w; s.async = true;
-        d.body.appendChild(s);
-      }
-    </script>
+    <form action="https://formspree.io/f/xldpwojz" method="POST" class="form">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Телефон">
+      <textarea name="message" placeholder="Что вы ожидаете от участия?"></textarea>
+      <button type="submit" class="btn">Записаться</button>
+    </form>
   </section>
 
   <footer>
