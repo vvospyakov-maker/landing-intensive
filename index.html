@@ -24,7 +24,7 @@
 </head>
 <body>
   <header class="hero fade-in">
-    <img src="author.jpg" alt="Фото ведущего" class="hero-img" />
+    <img src="author.jpg" alt="Фото Валерия Воспякова" class="hero-img" />
     <h1>Онлайн-интенсив «Мышление под контролем»</h1>
     <p>3-дневная практика для тех, кто устал от внутреннего сопротивления. Освободись от ограничивающих убеждений и начни двигаться вперёд.</p>
     <a href="#form" class="btn">Записаться на интенсив</a>
@@ -107,16 +107,17 @@
   </footer>
 
   <script>
-    const fadeInElems = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    fadeInElems.forEach(el => observer.observe(el));
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeInElems = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      fadeInElems.forEach(el => observer.observe(el));
+    });
   </script>
 </body>
 </html>
-
